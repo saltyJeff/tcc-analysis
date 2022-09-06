@@ -8,8 +8,8 @@ For more information, see this repository: https://github.com/jasonkarpman/TCC_E
 
 1. Every day, the [scraper script](https://github.com/jasonkarpman/TCC_Evaluation/blob/master/housing/programs/craigslist_scraper_aws.py) is executed on a fleet of EC2 instances that will scrape Craigslist data and upload it to a MySQL database
 2. On demand, a user can enter a sagemaker notebook that contains the files in this repository, and execute one of two scripts:
-  - `export_db.ipynb` will query all the data from the MySQL database, filter and clean it up, and perform a spatial join with the relevant census tracts. The data will be uploaded into a S3 bucket for other programs to query from
-  - `did.ipynb` will take data exported above from S3 and perform a differences in difference model.
+	- `export_db.ipynb` will query all the data from the MySQL database, filter and clean it up, and perform a spatial join with the relevant census tracts. The data will be uploaded into a S3 bucket for other programs to query from
+	- `did.ipynb` will take data exported above from S3 and perform a differences in difference model.
 
 ## File Overview
 
@@ -22,13 +22,13 @@ For more information, see this repository: https://github.com/jasonkarpman/TCC_E
 Due to the size of the data, the scripts use Spark and are meant to be executed within a Sagemaker Notebook. To instance a new notebook:
 
 1. Create a new Sagemaker Notebook instance. Settings are:
-  - Set the new instance's security group to the same one as the database. As of this writing it is `sg-0c8866efc64ef0416`
-  - Set instance type to whatever you want, I find that ml.t3.xlarge works well
+	- Set the new instance's security group to the same one as the database. As of this writing it is `sg-0c8866efc64ef0416`
+	- Set instance type to whatever you want, I find that ml.t3.xlarge works well
 2. Enter the sagemaker notebook and create a terminal
 3. Due to a bug that AWS as of this writing has yet to fix (https://github.com/aws/sagemaker-spark/issues/84#issuecomment-1186432966), a new conda environment will need to be created:
-  1. Open a new terminal, and enter `bash` (the default terminal is plain `sh`)
-  2. run `setup.sh`, this will install the new environment
-  3. go to the `*.ipynb`'s and change the kernel to spark_2_4_0
+	1. Open a new terminal, and enter `bash` (the default terminal is plain `sh`)
+	2. run `setup.sh`, this will install the new environment
+	3. go to the `*.ipynb`'s and change the kernel to spark_2_4_0
 
 **If you want to stop the instance to save money and restart it later, then you will have to go through steps 2 and below again**
 
