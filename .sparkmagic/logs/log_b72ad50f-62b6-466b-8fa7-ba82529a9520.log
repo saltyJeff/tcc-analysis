@@ -1,9 +1,0 @@
-2022-08-02 23:08:22,127	DEBUG	SparkMagics	Initialized spark magics.
-2022-08-02 23:08:22,129	INFO	EventsHandler	InstanceId: b72ad50f-62b6-466b-8fa7-ba82529a9520,EventName: notebookLoaded,Timestamp: 2022-08-02 23:08:22.129261
-2022-08-02 23:08:22,130	DEBUG	scala_jupyter_kernel	Loaded magics.
-2022-08-02 23:08:22,132	DEBUG	scala_jupyter_kernel	Changed language.
-2022-08-02 23:08:23,534	DEBUG	scala_jupyter_kernel	Registered auto viz.
-2022-08-02 23:08:23,658	INFO	EventsHandler	InstanceId: b72ad50f-62b6-466b-8fa7-ba82529a9520,EventName: notebookSessionCreationStart,Timestamp: 2022-08-02 23:08:23.658880,SessionGuid: 0d52267c-4d40-4b62-bc74-4a8c3ed02195,LivyKind: spark
-2022-08-02 23:08:23,663	ERROR	ReliableHttpClient	Request to 'http://localhost:8998/sessions' failed with 'HTTPConnectionPool(host='localhost', port=8998): Max retries exceeded with url: /sessions (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fb9144f2990>: Failed to establish a new connection: [Errno 111] Connection refused'))'
-2022-08-02 23:08:23,663	INFO	EventsHandler	InstanceId: b72ad50f-62b6-466b-8fa7-ba82529a9520,EventName: notebookSessionCreationEnd,Timestamp: 2022-08-02 23:08:23.663320,SessionGuid: 0d52267c-4d40-4b62-bc74-4a8c3ed02195,LivyKind: spark,SessionId: -1,Status: not_started,Success: False,ExceptionType: HttpClientException,ExceptionMessage: Error sending http request and maximum retry encountered.
-2022-08-02 23:08:23,663	ERROR	SparkMagics	Error creating session: Error sending http request and maximum retry encountered.
